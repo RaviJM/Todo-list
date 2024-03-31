@@ -31,16 +31,25 @@ h1{
 }
 
 
-.project-cross-btn-container{
+.project-cross-btn-container, .task-cross-btn-container{
     text-align: right;
     height: var(--project-cross-btn-container-height);
 }
 
-.project-cross-btn{
+.project-cross-btn, .task-cross-btn{
     height: 2rem;
     width: 2rem;
     margin-right: 0.5rem;
     margin-top: 0.3rem;
+}
+
+.task-cross-btn{
+    margin-right: 0rem;
+    margin-top: 0rem;
+}
+
+.project-cross-btn:hover, .task-cross-btn:hover{
+    background-color: rgb(255, 73, 73);
 }
 
 .project-inside-btn-container{
@@ -71,10 +80,6 @@ h1{
 
 
 
-.project-cross-btn:hover{
-    background-color: rgb(255, 73, 73);
-}
-
 
 #project-add-round-btn{
     position:fixed;
@@ -93,4 +98,94 @@ h1{
 
 #project-add-round-btn:active{
     background-color: rgb(0, 109, 0);
+}
+
+
+.project-tasks-page-header-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-btn{
+    height: 2.1rem;
+    width: 2.1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.3rem;
+    background-color: rgb(255, 230, 87);
+}
+
+.back-btn:hover{
+    background-color: rgb(255, 243, 175);
+}
+
+
+
+
+#project-add-task-btn{
+    position:fixed;
+    right: 1rem;
+    bottom: 1rem;
+    height: 4rem;
+    width: 6rem;
+    border-radius: 30%;
+    background-color: rgb(29, 162, 29);
+    border: solid 0.2em;
+}
+
+#project-add-task-btn:hover{
+    background-color: rgb(0, 137, 0);
+}
+
+#project-add-task-btn:active{
+    background-color: rgb(0, 109, 0);
+}
+
+
+
+
+.task-form-container{
+    --widthh: 15rem;
+    --heightt: 12rem;
+    border: solid;
+    position: absolute;
+    top: calc(50% - 0.5*var(--heightt));
+    left: calc(50% - 0.5*var(--widthh));
+    display: none;
+    background-color:rgb(255, 216, 169);
+    padding: 1rem;
+    width: var(--widthh);
+    height: var(--heightt);
+}
+
+.submit-button{
+    width: 4rem;
+    height: 2rem;
+    border: solid;
+    border-radius: 1rem;
+    background-color:rgb(29, 162, 29);
+}
+
+.submit-button:hover{
+    background-color:rgb(0, 137, 0);
+}
+
+.submit-button:active{
+    background-color:rgb(0, 109, 0);
+}
+
+
+
+
+.tasks-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    row-gap: 0.5rem;
+    padding-top: 1rem;
+}
+
+.task{
+    background-color:rgb(255, 216, 169);
+    border: solid;
+    padding: 1rem;
 }
